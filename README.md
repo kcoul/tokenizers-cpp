@@ -34,7 +34,7 @@ See [example](example) folder for an example CMake project.
 // - dist/tokenizer.json
 void HuggingFaceTokenizerExample() {
   // Read blob from file.
-  auto blob = LoadBytesFromFile("dist/tokenizer.json");
+  auto blob = loadBytesFromFile("dist/tokenizer.json");
   // Note: all the current factory APIs takes in-memory blob as input.
   // This gives some flexibility on how these blobs can be read.
   auto tok = Tokenizer::FromBlobJSON(blob);
@@ -47,7 +47,7 @@ void HuggingFaceTokenizerExample() {
 
 void SentencePieceTokenizerExample() {
   // Read blob from file.
-  auto blob = LoadBytesFromFile("dist/tokenizer.model");
+  auto blob = loadBytesFromFile("dist/tokenizer.model");
   // Note: all the current factory APIs takes in-memory blob as input.
   // This gives some flexibility on how these blobs can be read.
   auto tok = Tokenizer::FromBlobSentencePiece(blob);
